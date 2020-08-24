@@ -5,32 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">    
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
 
-    <div id="contenido">
-        <div>
-           <h1>Lista de Tareas</h1>
+   
+        <div class="container">
+           <h1>Task</h1>
             <div>
-                <div>
-                    <label for="task">Nueva tarea:</label>
+                <h2>Nueva tarea</h2>
+                <div class="container-form">
                     <form action="#" id="formulario">
-                            <label for="task"></label>
-                            <textarea id="task"></textarea>
-                            <input type="submit" value="Agregar">
+                        <div class="container-input">
+                            <input type="text" id="task"></input>
+                        </div>
+                        <div class="container-input">
+                            <input type="submit" value="Agregar tarea">
+                        </div>
                     </form>
                 </div>
                 <div>
-                    <h2>Mis Tareas</h2>
+                    <h3>Mis Tareas</h3>
                     <div>
                         <ul  id="list-task">
-
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!--#contenido-->
+
 
     <script src="js/app.js"></script>
 </body>

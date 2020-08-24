@@ -24,22 +24,28 @@ function addTask(e){
     e.preventDefault();
     //Leer valor del textarea
     const task = document.getElementById('task').value;
+
+    if(task === ""){
+        alert('Tarea esta vacia')
+    } else {
     //Boton para eliminar tarea
     const buttonDelete = document.createElement('a');
     buttonDelete.setAttribute('href', '#')
     buttonDelete.classList = 'delete-task';
-    buttonDelete.innerText = 'X';
+    buttonDelete.innerText = 'Eliminar';
 
     //Se crea lista y se agrega contenido a la lista.
     const li = document.createElement('li');
-    li.innerText = task;
+    const span = document.createElement('span');
+    span.innerText = task;
+    li.appendChild(span);
     li.appendChild(buttonDelete);
     listTask.appendChild(li);
 
       //Guardar en localStorage
     addTaskLocalStorage(task);
-    task.value = ""  
-    
+    document.getElementById('task').value = ""; 
+    }
 }
 
 
@@ -64,10 +70,12 @@ function taskLocalStorage(){
         buttonDelete.setAttribute('href', '#')
         buttonDelete.classList = 'delete-task';
         buttonDelete.innerText = 'X';
-
+    
         //Se crea lista y se agrega contenido a la lista.
         const li = document.createElement('li');
-        li.innerText = task;
+        const span = document.createElement('span');
+        span.innerText = task;
+        li.appendChild(span);
         li.appendChild(buttonDelete);
         listTask.appendChild(li);
     })
