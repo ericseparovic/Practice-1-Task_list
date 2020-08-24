@@ -69,7 +69,7 @@ function taskLocalStorage(){
         const buttonDelete = document.createElement('a');
         buttonDelete.setAttribute('href', '#')
         buttonDelete.classList = 'delete-task';
-        buttonDelete.innerText = 'X';
+        buttonDelete.innerText = 'Eliminar';
     
         //Se crea lista y se agrega contenido a la lista.
         const li = document.createElement('li');
@@ -108,7 +108,7 @@ function getTaskLocalStorage(){
 //Eliminar tarea de localStorage
 function deleteTaskLocalStorage(task){
     let tasks, taskDelete;
-    //Elimina la x de la tarea
+    //Elimina el strign Eliminar
     taskDelete = task.substring(0, task.length - 1);
 
     tasks = getTaskLocalStorage();
